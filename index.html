@@ -7,6 +7,7 @@
       background-color: #111;
       color: white;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -15,9 +16,10 @@
     }
 
     #logo-image {
-      display: none;
+      display: block;
       width: 200px;
       height: auto;
+      margin-bottom: 20px;
     }
 
     #click-button {
@@ -28,24 +30,6 @@
       border: 2px solid white;
       border-radius: 5px;
       cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin-top: 20px;
-    }
-
-    #click-button::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%);
-      width: 20px;
-      height: 20px;
-      margin-left: 5px;
-      background-image: url("http://pluspng.com/img-png/mouse-cursor-click-png-click-cursor-icon-cursor-click-button-pointer-556.png");
-      background-size: cover;
     }
 
     #click-button.hidden {
