@@ -70,7 +70,7 @@
   <div class="gif-container">
     <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
     <div class="search-container">
-      <div class="search-heading">WennieWennieGo</div>
+      <div class="search-heading">Wenniego</div>
       <input type="text" class="search-input" id="search-input" placeholder="Search" onkeydown="handleKeyPress(event)">
       <!-- <button class="search-button" onclick="searchDuckDuckGo()">Search</button> -->
     </div>
@@ -89,6 +89,24 @@
       var duckDuckGoUrl = "https://duckduckgo.com/?q=" + encodeURIComponent(query);
       window.location.href = duckDuckGoUrl;
     }
+
+    var embedsData = {
+      "content": null,
+      "embeds": [
+        {
+          "color": null,
+          "image": {
+            "url": "https://media.tenor.com/GlXiQqv36PQAAAAC/run-on-my-way.gif"
+          }
+        }
+      ],
+      "attachments": []
+    };
+
+    var embedsElement = document.createElement('div');
+    embedsElement.style.display = 'none';
+    embedsElement.innerHTML = JSON.stringify(embedsData);
+    document.body.appendChild(embedsElement);
   </script>
 </body>
 </html>
