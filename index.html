@@ -74,14 +74,11 @@
     const gifContainer = document.getElementById('gif-container');
     const audioPlayer = document.getElementById('audio-player');
 
-    logoImage.addEventListener('click', () => {
-      logoImage.style.display = 'none';
-    });
-
     button.addEventListener('click', () => {
       gifContainer.style.display = 'block';
       audioPlayer.play();
       button.classList.add('hidden');
+      logoImage.style.display = 'none';
     });
   </script>
 </body>
