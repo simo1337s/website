@@ -54,11 +54,17 @@
     <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
   </div>
   <div class="search-container">
-    <input type="text" class="search-input" id="search-input" placeholder="Search with DuckDuckGo">
+    <input type="text" class="search-input" id="search-input" placeholder="Search with DuckDuckGo" onkeydown="handleKeyPress(event)">
     <button class="search-button" onclick="searchDuckDuckGo()">Search</button>
   </div>
 
   <script>
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        searchDuckDuckGo();
+      }
+    }
+
     function searchDuckDuckGo() {
       var searchInput = document.getElementById("search-input");
       var query = searchInput.value;
