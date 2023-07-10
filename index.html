@@ -37,8 +37,15 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: flex;
+      flex-direction: column;
       align-items: center;
       z-index: 1;
+    }
+
+    .search-heading {
+      font-size: 24px;
+      color: #333333;
+      margin-bottom: 10px;
     }
 
     .search-input {
@@ -59,7 +66,7 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
-      margin-left: 10px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -67,6 +74,7 @@
   <div class="gif-container">
     <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
     <div class="search-container">
+      <div class="search-heading">Wenniego</div>
       <input type="text" class="search-input" id="search-input" placeholder="Search with DuckDuckGo" onkeydown="handleKeyPress(event)">
       <button class="search-button" onclick="searchDuckDuckGo()">Search</button>
     </div>
