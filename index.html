@@ -22,6 +22,22 @@
       border: 2px solid white;
       border-radius: 5px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    #click-button::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-image: url("http://pluspng.com/img-png/mouse-cursor-click-png-click-cursor-icon-cursor-click-button-pointer-556.png");
+      background-size: cover;
     }
 
     #click-button.hidden {
