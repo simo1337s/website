@@ -1,109 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>wennie <3</title>
-  <link rel="icon" type="image/png" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipground.com%2Fimages%2Fdachshund-clipart-black-and-white-2.png&f=1&nofb=1&ipt=fcf351569dd93a85e5b9494701c78357b479fd4a26d667f5fa704c70df8752f9&ipo=images">
-  <style>
-    body {
-      background-color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-      margin: 0;
-      color: white;
-    }
+    <meta charset="UTF-8">
+    <title>simo</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
 
-    .gif-container {
-      position: relative;
-      max-width: 300%;
-      max-height: 300%;
-      user-select: none;
-      margin-top: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+        #video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .gif-container img {
-      pointer-events: none;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .search-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 1;
-    }
-
-    .search-heading {
-      font-size: 36px;
-      font-weight: bold;
-      font-family: "Arial Black", sans-serif;
-      color: #333333;
-      margin-bottom: 10px;
-    }
-
-    .search-input {
-      padding: 8px;
-      width: 300px;
-      border: none;
-      font-size: 16px;
-      border-radius: 5px;
-      background-color: #333333;
-      color: white;
-    }
-
-    .search-button {
-      display: none;
-    }
-  </style>
+        video {
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="gif-container">
-    <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
-    <div class="search-container">
-      <div class="search-heading">WennieWennieGo</div>
-      <input type="text" class="search-input" id="search-input" placeholder="Search" onkeydown="handleKeyPress(event)">
-      <!-- <button class="search-button" onclick="searchDuckDuckGo()">Search</button> -->
+    <div id="video-container">
+        <video autoplay controls>
+            <source src="https://cdn.discordapp.com/attachments/1119372837619257565/1127878020338831490/9convert.com_-_bladee_Be_Nice_To_Me_1080p.mp4" type="video/mp4">
+        </video>
     </div>
-  </div>
-
-  <script>
-    function handleKeyPress(event) {
-      if (event.key === 'Enter') {
-        searchDuckDuckGo();
-      }
-    }
-
-    function searchDuckDuckGo() {
-      var searchInput = document.getElementById("search-input");
-      var query = searchInput.value;
-      var duckDuckGoUrl = "https://duckduckgo.com/?q=" + encodeURIComponent(query);
-      window.location.href = duckDuckGoUrl;
-    }
-
-    var embedsData = {
-      "embeds": [
-        {
-          "color": null,
-          "image": {
-            "url": "https://media.tenor.com/GlXiQqv36PQAAAAC/run-on-my-way.gif"
-          }
-        }
-      ]
-    };
-
-    var embedsElement = document.createElement('script');
-    embedsElement.innerHTML = 'window.addEventListener("DOMContentLoaded", function(){window.parent.postMessage(' + JSON.stringify(embedsData) + ', "*");});';
-    document.body.appendChild(embedsElement);
-  </script>
 </body>
 </html>
