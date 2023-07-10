@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>simo</title>
-    <link rel="icon" href="path/to/icon.png" type="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fofficialdrain.altervista.org%2Fdraingangicon.png&f=1&nofb=1&ipt=ad7b883bf1cce8e57d0bd74a7038114cd73955972d8453bac0302c4f8168bf20&ipo=images">
+    <title>Video Player</title>
     <style>
         html, body {
             margin: 0;
@@ -24,13 +23,34 @@
             width: 70%; /* Adjust the size as desired */
             height: auto;
         }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: white;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function playVideo() {
+            var video = document.getElementById("myVideo");
+            video.play();
+            var playButton = document.getElementById("playButton");
+            playButton.style.display = "none";
+        }
+    </script>
 </head>
 <body>
     <div id="video-container">
-        <video autoplay controls>
+        <video id="myVideo" controls>
             <source src="https://cdn.discordapp.com/attachments/1119372837619257565/1127878020338831490/9convert.com_-_bladee_Be_Nice_To_Me_1080p.mp4" type="video/mp4">
         </video>
+        <div class="play-button" id="playButton" onclick="playVideo()">
+            &#9658;
+        </div>
     </div>
 </body>
 </html>
