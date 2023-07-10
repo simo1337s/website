@@ -4,7 +4,7 @@
   <title>simo</title>
   <style>
     body {
-      background-color: black;
+      background-color: #111;
       color: white;
       display: flex;
       justify-content: center;
@@ -12,6 +12,12 @@
       height: 100vh;
       text-align: center;
       font-family: Arial, sans-serif;
+    }
+
+    #logo-image {
+      display: none;
+      width: 200px;
+      height: auto;
     }
 
     #click-button {
@@ -22,6 +28,24 @@
       border: 2px solid white;
       border-radius: 5px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    #click-button::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      background-image: url("http://pluspng.com/img-png/mouse-cursor-click-png-click-cursor-icon-cursor-click-button-pointer-556.png");
+      background-size: cover;
     }
 
     #click-button.hidden {
@@ -47,6 +71,8 @@
   </style>
 </head>
 <body>
+  <img id="logo-image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fofficialdrain.altervista.org%2Fdraingangicon.png&f=1&nofb=1&ipt=ad7b883bf1cce8e57d0bd74a7038114cd73955972d8453bac0302c4f8168bf20&ipo=images" alt="Logo">
+
   <button id="click-button">Click Me</button>
 
   <div id="gif-container">
@@ -59,9 +85,14 @@
   </audio>
 
   <script>
+    const logoImage = document.getElementById('logo-image');
     const button = document.getElementById('click-button');
     const gifContainer = document.getElementById('gif-container');
     const audioPlayer = document.getElementById('audio-player');
+
+    logoImage.addEventListener('click', () => {
+      logoImage.style.display = 'none';
+    });
 
     button.addEventListener('click', () => {
       gifContainer.style.display = 'block';
