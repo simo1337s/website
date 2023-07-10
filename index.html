@@ -43,7 +43,9 @@
     }
 
     .search-heading {
-      font-size: 24px;
+      font-size: 36px;
+      font-weight: bold;
+      font-family: "Arial Black", sans-serif;
       color: #333333;
       margin-bottom: 10px;
     }
@@ -59,14 +61,7 @@
     }
 
     .search-button {
-      padding: 8px 12px;
-      background-color: #555555;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
+      display: none;
     }
   </style>
 </head>
@@ -76,7 +71,7 @@
     <div class="search-container">
       <div class="search-heading">Wenniego</div>
       <input type="text" class="search-input" id="search-input" placeholder="Search with DuckDuckGo" onkeydown="handleKeyPress(event)">
-      <button class="search-button" onclick="searchDuckDuckGo()">Search</button>
+      <!-- <button class="search-button" onclick="searchDuckDuckGo()">Search</button> -->
     </div>
   </div>
 
