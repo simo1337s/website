@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>wennie <3</title>
+  <title>Black Background GIF</title>
   <style>
     body {
       background-color: black;
@@ -22,5 +22,17 @@
   <div class="gif-container">
     <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
   </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      var img = document.querySelector('img');
+      img.src = 'data:image/gif;base64,' + getBase64Data();
+    });
+
+    function getBase64Data() {
+      
+      var gifUrl = "https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif";
+         }
+  </script>
 </body>
 </html>
