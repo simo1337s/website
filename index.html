@@ -15,6 +15,7 @@
     }
 
     .gif-container {
+      position: relative;
       max-width: 300%;
       max-height: 300%;
       user-select: none;
@@ -31,9 +32,13 @@
     }
 
     .search-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      z-index: 1;
     }
 
     .search-input {
@@ -54,16 +59,17 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
+      margin-left: 10px;
     }
   </style>
 </head>
 <body>
   <div class="gif-container">
     <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
-  </div>
-  <div class="search-container">
-    <input type="text" class="search-input" id="search-input" placeholder="Search with DuckDuckGo" onkeydown="handleKeyPress(event)">
-    <button class="search-button" onclick="searchDuckDuckGo()">Search</button>
+    <div class="search-container">
+      <input type="text" class="search-input" id="search-input" placeholder="Search with DuckDuckGo" onkeydown="handleKeyPress(event)">
+      <button class="search-button" onclick="searchDuckDuckGo()">Search</button>
+    </div>
   </div>
 
   <script>
