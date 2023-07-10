@@ -6,10 +6,12 @@
     body {
       background-color: black;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
+      color: white;
     }
 
     .gif-container {
@@ -21,11 +23,48 @@
     .gif-container img {
       pointer-events: none;
     }
+
+    .search-container {
+      margin-top: 20px;
+      display: flex;
+    }
+
+    .search-input {
+      padding: 5px;
+      width: 300px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .search-button {
+      padding: 5px 10px;
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div class="gif-container">
     <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
   </div>
+  <div class="search-container">
+    <input type="text" class="search-input" id="search-input" placeholder="Search with DuckDuckGo">
+    <button class="search-button" onclick="searchDuckDuckGo()">Search</button>
+  </div>
+
+  <script>
+    function searchDuckDuckGo() {
+      var searchInput = document.getElementById("search-input");
+      var query = searchInput.value;
+      var duckDuckGoUrl = "https://duckduckgo.com/?q=" + encodeURIComponent(query);
+      window.location.href = duckDuckGoUrl;
+    }
+  </script>
 </body>
 </html>
