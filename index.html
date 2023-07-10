@@ -1,56 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Video Player</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-        }
-
-        #video-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        video {
-            pointer-events: none;
-            width: 70%; /* Adjust the size as desired */
-            height: auto;
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 48px;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=google.com">
     <script>
-        function playVideo() {
-            var video = document.getElementById("myVideo");
-            video.play();
-            var playButton = document.getElementById("playButton");
-            playButton.style.display = "none";
-        }
+      window.location.href = "google.com";
     </script>
-</head>
-<body>
-    <div id="video-container">
-        <video id="myVideo" controls>
-            <source src="https://youtu.be/vcAp4nmTZCA" type="video/mp4">
-        </video>
-        <div class="play-button" id="playButton" onclick="playVideo()">
-            &#9658;
-        </div>
-    </div>
-</body>
+  </head>
+  <body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, please click <a href="google.com">here</a>.</p>
+  </body>
 </html>
