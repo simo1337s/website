@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>wennie <3</title>
+  <title>Black Background GIF</title>
   <style>
     body {
       background-color: black;
@@ -20,18 +20,18 @@
 </head>
 <body>
   <div class="gif-container">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" alt="GIF Image">
+    <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF Image">
   </div>
 
   <script>
     window.addEventListener('load', function() {
       var img = document.querySelector('img');
-      img.src = 'data:image/gif;base64,' + getBase64Data();
-    });
+      img.src = 'https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif';
 
-    function getBase64Data() {
-      return "R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=";
-    }
+      var discordMessage = "![" + img.alt + "](" + img.src + ")";
+      // Use the variable discordMessage to send the message to Discord
+      // ...
+    });
   </script>
 </body>
 </html>
