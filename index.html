@@ -7,7 +7,6 @@
       background-color: #111;
       color: white;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -16,40 +15,12 @@
     }
 
     #logo-image {
-      display: block;
       width: 200px;
       height: auto;
-      margin-bottom: 20px;
-    }
-
-    #click-button {
-      background-color: black;
-      color: white;
-      padding: 10px 20px;
-      font-size: 18px;
-      border: 2px solid white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #click-button.hidden {
-      display: none;
     }
   </style>
 </head>
 <body>
   <img id="logo-image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fofficialdrain.altervista.org%2Fdraingangicon.png&f=1&nofb=1&ipt=ad7b883bf1cce8e57d0bd74a7038114cd73955972d8453bac0302c4f8168bf20&ipo=images" alt="Logo">
-
-  <button id="click-button">Click Me</button>
-
-  <script>
-    const logoImage = document.getElementById('logo-image');
-    const button = document.getElementById('click-button');
-
-    button.addEventListener('click', () => {
-      logoImage.style.display = 'none';
-      button.classList.add('hidden');
-    });
-  </script>
 </body>
 </html>
