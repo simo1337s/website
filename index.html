@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>simo</title>
+  <title>vz/title>
   <style>
     body {
       background-color: #111;
@@ -35,23 +35,6 @@
     #click-button.hidden {
       display: none;
     }
-
-    #gif-container {
-      display: none;
-      margin-top: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    #gif-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    #audio-player {
-      display: none;
-    }
   </style>
 </head>
 <body>
@@ -59,26 +42,13 @@
 
   <button id="click-button">Click Me</button>
 
-  <div id="gif-container">
-    <img src="https://media.tenor.com/vUtfr6uQX9YAAAAd/dachshunds-dogs.gif" alt="GIF">
-  </div>
-
-  <audio id="audio-player" controls>
-    <source src="https://cdn.discordapp.com/attachments/1119372837619257565/1127878020338831490/9convert.com_-_bladee_Be_Nice_To_Me_1080p.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
-
   <script>
     const logoImage = document.getElementById('logo-image');
     const button = document.getElementById('click-button');
-    const gifContainer = document.getElementById('gif-container');
-    const audioPlayer = document.getElementById('audio-player');
 
     button.addEventListener('click', () => {
-      gifContainer.style.display = 'block';
-      audioPlayer.play();
-      button.classList.add('hidden');
       logoImage.style.display = 'none';
+      button.classList.add('hidden');
     });
   </script>
 </body>
