@@ -7,6 +7,7 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+      background-color: black;
     }
     video {
       width: 100%;
@@ -15,28 +16,14 @@
   </style>
 </head>
 <body>
-  <button onclick="playVideo()">Play Video</button>
-  <video id="videoPlayer" width="100%" height="100%" muted playsinline>
+  <video id="videoPlayer" width="100%" height="100%" autoplay muted playsinline>
     <source src="https://cdn.discordapp.com/attachments/947131266086613032/1131643062301499543/bleedIGG6xRLnp837Z3Q.mp4" type="video/mp4">
   </video>
 
   <script>
     const videoPlayer = document.getElementById('videoPlayer');
     
-    function playVideo() {
-      videoPlayer.muted = false;
-      videoPlayer.play();
-
-      if (videoPlayer.requestFullscreen) {
-        videoPlayer.requestFullscreen();
-      } else if (videoPlayer.mozRequestFullScreen) {
-        videoPlayer.mozRequestFullScreen();
-      } else if (videoPlayer.webkitRequestFullscreen) {
-        videoPlayer.webkitRequestFullscreen();
-      } else if (videoPlayer.msRequestFullscreen) {
-        videoPlayer.msRequestFullscreen();
-      }
-    }
+    videoPlayer.play();
   </script>
 </body>
 </html>
